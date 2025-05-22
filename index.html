@@ -13,66 +13,182 @@
 		.btns {
 			box-shadow: 3px 3px 0px 0px #2e2f35;
 		}
+		.menu-toggle:checked + label + .mobile-menu {
+			display: block;
+		}
+		.mobile-menu {
+			display: none;
+		}
 	</style>
 	<body class="font-inter">
-		<!--==============================================
-		          		Header
-		=============================================-->
-		<div class="bg-[#E0F8F2]">
-			<div class="max-w-[1440px] m-auto container">
+		<div class="bg-[#E0F8F2] ">
+			<div class="max-w-[1440px] mx-auto">
 				<div class="pt-[7.53px]">
-					<header class="w-full max-[1440px]:max-h-[65px]">
-						<div class="bg-white">
-							<div
-								class="max-w-[1290px] max-[1440px]:max-h-[65px] m-auto px-[75px] flex justify-between items-end"
-							>
-								<div class="max-w-[162.31px] max-h-[30px]">
-									<img src="images/headerlogo.png" alt="" />
-								</div>
-								<div class="py-[5.5px]">
-									<nav class="flex gap-[19px]">
-										<div class="">
-											<ul
-												class="flex font-medium text-[14px] leading-[18px] gap-[19px] text-center items-end h-full"
+					<!--==============================================
+		          					Header
+					=============================================-->
+					<header class="w-full bg-white">
+						<div
+							class="max-w-[1290px] mx-auto px-4 md:px-8 lg:px-[75px] flex justify-between items-center py-4 md:py-2"
+						>
+							<div class="w-[120px] md:w-[162.31px]">
+								<img src="images/headerlogo.png" alt="Logo" class="w-full h-auto" />
+							</div>
+
+							<div class="block md:hidden relative">
+								<input type="checkbox" id="menu-toggle" class="hidden menu-toggle" />
+								<label for="menu-toggle" class="cursor-pointer block p-2">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M4 6h16M4 12h16M4 18h16"
+										/>
+									</svg>
+								</label>
+
+								<div
+									class="mobile-menu absolute top-full right-0 w-64 bg-white shadow-lg rounded-lg overflow-hidden z-50"
+								>
+									<nav class="p-4">
+										<ul class="space-y-4 font-medium text-sm">
+											<li>
+												<a href="#" class="flex items-center justify-between">
+													<span>Resources</span>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														class="h-4 w-4"
+														fill="none"
+														viewBox="0 0 24 24"
+														stroke="currentColor"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															stroke-width="2"
+															d="M19 9l-7 7-7-7"
+														/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#">Success stories</a>
+											</li>
+											<li>
+												<a href="#" class="flex items-center justify-between">
+													<span>Company</span>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														class="h-4 w-4"
+														fill="none"
+														viewBox="0 0 24 24"
+														stroke="currentColor"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															stroke-width="2"
+															d="M19 9l-7 7-7-7"
+														/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#">Pricing</a>
+											</li>
+										</ul>
+										<div class="mt-6 space-y-3">
+											<a
+												href="#"
+												class="font-medium text-sm block text-center py-2 px-4 bg-white border-2 border-[#2E2F35] rounded-[12px] hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300 btns"
 											>
-												<li class="">
-													<a href="" class="flex items-center gap-[10.48px]"
-														><span>Resources</span
-														><span><img src="images/dropdown.png" alt="" /></span
-													></a>
-												</li>
-												<li>
-													<a href="">Success stories</a>
-												</li>
-												<li class="">
-													<a href="" class="flex items-center gap-[10.48px]"
-														><span>Company</span
-														><span><img src="images/dropdown.png" alt="" /></span
-													></a>
-												</li>
-												<li>
-													<a href="">Pricing</a>
-												</li>
-											</ul>
-										</div>
-										<div class="flex gap-[16px]">
-											<div class="mt-[30px]">
-												<a
-													href=""
-													class="font-medium text-[15px] leading-[18px] pt-[14px] pr-[21.84px] pb-[12px] pl-[22px] bg-[#FFFFFF] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300"
-													>Login</a
-												>
-											</div>
-											<div class="mt-[30px]">
-												<a
-													href=""
-													class="font-medium text-[14px text-white leading-[18px] pt-[14px] pr-[25.86px] pb-[12px] pl-[25px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300"
-													>Create free account</a
-												>
-											</div>
+												Login
+											</a>
+											<a
+												href="#"
+												class="font-medium text-sm block text-center btns text-white py-2 px-4 bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[12px] hover:bg-white hover:text-black transition-colors duration-300 btns"
+											>
+												Create free account
+											</a>
 										</div>
 									</nav>
 								</div>
+							</div>
+
+							<div class="hidden md:block">
+								<nav class="flex gap-4 lg:gap-[19px] items-center">
+									<div>
+										<ul
+											class="flex font-medium text-sm lg:text-[14px] leading-[18px] gap-4 lg:gap-[19px] text-center items-end"
+										>
+											<li>
+												<a href="#" class="flex items-center gap-2 lg:gap-[10.48px]">
+													<span>Resources</span>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														class="h-4 w-4"
+														fill="none"
+														viewBox="0 0 24 24"
+														stroke="currentColor"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															stroke-width="2"
+															d="M19 9l-7 7-7-7"
+														/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#">Success stories</a>
+											</li>
+											<li>
+												<a href="#" class="flex items-center gap-2 lg:gap-[10.48px]">
+													<span>Company</span>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														class="h-4 w-4"
+														fill="none"
+														viewBox="0 0 24 24"
+														stroke="currentColor"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															stroke-width="2"
+															d="M19 9l-7 7-7-7"
+														/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#">Pricing</a>
+											</li>
+										</ul>
+									</div>
+									<div class="flex gap-2 lg:gap-[16px] ml-4">
+										<a
+											href="#"
+											class="font-medium text-sm lg:text-[15px] leading-[18px] py-2 px-4 lg:pt-[14px] lg:pr-[21.84px] lg:pb-[12px] lg:pl-[22px] md:pt-[14px] md:pr-[15px] md:pb-[12px] md:pl-[15px] bg-white border-2 border-[#2E2F35] rounded-[12px] hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300 btns"
+										>
+											Login
+										</a>
+										<a
+											href="#"
+											class="font-medium text-sm lg:text-[14px] text-white leading-[18px] py-2 px-4 lg:pt-[14px] lg:pr-[25.86px] lg:pb-[12px] lg:pl-[25px] md:text-[11px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[12px] hover:bg-white hover:text-black transition-colors duration-300 btns"
+										>
+											Create free account
+										</a>
+									</div>
+								</nav>
 							</div>
 						</div>
 					</header>
@@ -80,86 +196,94 @@
 		          					Section 1
 					=============================================-->
 					<section
-						class="max-w-[1440px] max-h-[756px] py-[128px] px-[75px] relative overflow-hidden"
+						class="px-4 md:px-8 lg:px-[75px] py-12 md:py-16 lg:py-[128px] relative overflow-hidden"
 					>
-						<div class="max-w-[1290px] max-h-[500px] flex">
-							<div class="max-w-[793.84px] max-h-[500px] flex">
-								<div class="">
-									<div class="pt-[7px] pr-[14px]">
-										<h1
-											class="font-bold text-[82px] leading-[96px] text-left wrap-break-word"
-										>
-											Meet your <br />
-											<span class="font-normal font-grace text-green">favorite</span> new
-											(old) marketing channel.
-										</h1>
-									</div>
-									<div class="flex flex-col gap-[48px]">
-										<div class="pt-[25px]">
+						<div class="max-w-[1290px] mx-auto">
+							<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+								<div class="z-10">
+									<h1
+										class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-[82px] leading-tight lg:leading-[96px] text-left"
+									>
+										Meet your <br />
+										<span class="font-normal font-grace text-green">favorite</span> new
+										(old) marketing channel.
+									</h1>
+									<div class="flex flex-col gap-6 md:gap-[48px]">
+										<div class="pt-4 md:pt-[25px]">
 											<p
-												class="max-w-[553.9656372070312px] max-h-[68px] leading-[34px] text-[20px] text-[#58595D]"
+												class="text-base md:text-lg lg:text-[20px] leading-relaxed lg:leading-[34px] text-[#58595D] max-w-[554px]"
 											>
 												Remarkable results. Easier than email. Postcard marketing reinvented
 												for modern ecommerce.
 											</p>
 										</div>
-										<div class="flex gap-[40px] text-center items-center">
-											<div class="">
-												<a
-													href=""
-													class="font-medium text-[13px] text-white leading-[20px] pt-[22px] pr-[66.05px] pb-[22px] pl-[65px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[15px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300 uppercase tracking-[1.2px]"
-													>Try it Risk-free</a
-												>
-											</div>
-											<div class="">
-												<img src="images/sec1stars.png" alt="" />
-												<span class="font-medium text-[16px] leading-[24px]"
+										<div
+											class="flex flex-col sm:flex-row gap-6 sm:gap-[40px] items-start sm:items-center"
+										>
+											<a
+												href="#"
+												class="font-medium text-xs md:text-[13px] text-white leading-[20px] py-4 px-8 md:pt-[22px] md:pr-[66.05px] md:pb-[22px] md:pl-[65px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[15px] hover:bg-white hover:text-black transition-colors duration-300 uppercase tracking-[1.2px] inline-block btns"
+											>
+												Try it Risk-free
+											</a>
+											<div class="flex flex-col items-center gap-2">
+												<img src="images/sec1stars.png" alt="5 stars" class="h-auto" />
+												<span class="font-medium text-sm md:text-[16px] leading-[24px]"
 													>5.0 Shopify Rating</span
 												>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="absolute top-[44.11px] right-0">
-								<img src="images/sec1imgmain.png" alt="" />
+								<div class="relative">
+									<div
+										class="lg:absolute lg:top-[-100px] lg:right-[-100px] xl:right-[-50px] 2xl:right-0"
+									>
+										<img
+											src="images/sec1imgmain.png"
+											alt="Marketing postcard"
+											class="w-full h-auto object-contain"
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</section>
 				</div>
 			</div>
 		</div>
+
 		<main>
 			<!--==============================================
 		          			Section 2
 			=============================================-->
 			<div class="max-w-[1440px] m-auto container">
 				<section
-					class="bg-white w-full max-[1440px]:max-h-[666.5px] pt-[106px] pb-[96px]"
+					class="bg-white w-full py-12 md:py-16 lg:pt-[106px] lg:pb-[96px] px-4 md:px-8"
 				>
-					<div class="flex flex-col gap-[58px] items-center text-center">
-						<div class="max-w-[650px] max-h-[157px]">
-							<h2 class="text-[63px] leading-[76px] tracking-[-2px] font-bold">
+					<div class="flex flex-col gap-8 md:gap-[58px] items-center text-center">
+						<div class="max-w-[650px]">
+							<h2 class="text-3xl md:text-5xl lg:text-[63px] leading-tight md:leading-[76px] tracking-[-2px] font-bold">
 								Trusted by thousands of top DTC
 								<span class="font-grace text-green font-normal">brands.</span>
 							</h2>
 						</div>
-						<div class="flex gap-[64px]">
+						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-[64px] w-full">
 							<div class="flex flex-col gap-[24px] items-center">
-								<img src="images/sec2img1.png" alt="" />
-								<img src="images/sec2logo1.png" alt="" width="184px" height="32px" />
+								<img src="images/sec2img1.png" alt="" class="w-full max-w-[250px]" />
+								<img src="images/sec2logo1.png" alt="" class="w-full max-w-[184px] h-auto" />
 							</div>
 							<div class="flex flex-col gap-[24px] items-center">
-								<img src="images/sec2img2.png" alt="" />
-								<img src="images/sec2logo2.png" alt="" width="235px" height="32px" />
+								<img src="images/sec2img2.png" alt="" class="w-full max-w-[250px]" />
+								<img src="images/sec2logo2.png" alt="" class="w-full max-w-[235px] h-auto" />
 							</div>
 							<div class="flex flex-col gap-[24px] items-center">
-								<img src="images/sec2img3.png" alt="" />
-								<img src="images/sec2logo3.png" alt="" width="166px" height="32px" />
+								<img src="images/sec2img3.png" alt="" class="w-full max-w-[250px]" />
+								<img src="images/sec2logo3.png" alt="" class="w-full max-w-[166px] h-auto" />
 							</div>
 							<div class="flex flex-col gap-[24px] items-center">
-								<img src="images/sec2img4.png" alt="" />
-								<img src="images/sec2logo4.png" alt="" width="60px" height="32px" />
+								<img src="images/sec2img4.png" alt="" class="w-full max-w-[250px]" />
+								<img src="images/sec2logo4.png" alt="" class="w-full max-w-[60px] h-auto" />
 							</div>
 						</div>
 					</div>
@@ -170,37 +294,37 @@
 			=============================================-->
 			<section class="bg-[#F3FAFA]">
 				<div class="max-w-[1440px] m-auto container">
-					<div class="w-full max-[1440px]:max-h-[643px] px-[208px]">
-						<div class="pt-[106px] pb-[96px]">
-							<div class="flex flex-col gap-[58px] text-center">
-								<div class="max-w-[603px] max-h-[157px] mx-auto">
-									<h2 class="font-bold text-[63px] leading-[76px] tracking-[-2px]">
+					<div class="w-full px-4 md:px-8 lg:px-[208px]">
+						<div class="py-12 md:py-16 lg:pt-[106px] lg:pb-[96px]">
+							<div class="flex flex-col gap-8 md:gap-[58px] text-center">
+								<div class="max-w-[603px] mx-auto">
+									<h2 class="font-bold text-3xl md:text-5xl lg:text-[63px] leading-tight md:leading-[76px] tracking-[-2px]">
 										Why use direct mail? It
 										<span class="font-grace text-green font-normal">works</span> like
 										crazy.
 									</h2>
 								</div>
-								<div class="flex text-center items-center gap-[170px]">
+								<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-[170px] text-center items-center">
 									<div class="flex flex-col gap-[2px]">
-										<h6 class="font-bold text-[63px] leading-[76px] tracking-[-2px]">
+										<h6 class="font-bold text-4xl md:text-5xl lg:text-[63px] leading-tight md:leading-[76px] tracking-[-2px]">
 											28X
 										</h6>
 										<p
-											class="font-[500] text-[14px] leading-[22px] tracking-[0px] text-[#58595D]"
+											class="font-[500] text-sm md:text-[14px] leading-tight md:leading-[22px] tracking-[0px] text-[#58595D]"
 										>
 											Higher response rate than email & digital
 										</p>
 									</div>
 									<div class="flex flex-col gap-[2px]">
-										<img src="images/sec3img.png" alt="" />
+										<img src="images/sec3img.png" alt="" class="mx-auto" />
 										<p>Your messages get read</p>
 									</div>
 									<div class="flex flex-col gap-[2px]">
-										<h6 class="font-bold text-[63px] leading-[76px] tracking-[-2px]">
+										<h6 class="font-bold text-4xl md:text-5xl lg:text-[63px] leading-tight md:leading-[76px] tracking-[-2px]">
 											17 Days
 										</h6>
 										<p
-											class="font-[500] text-[14px] leading-[22px] tracking-[0px] text-[#58595D]"
+											class="font-[500] text-sm md:text-[14px] leading-tight md:leading-[22px] tracking-[0px] text-[#58595D]"
 										>
 											Lifespan of a postcard vs. seconds for email or SMS
 										</p>
@@ -216,143 +340,143 @@
 			=============================================-->
 			<section class="bg-[#FDF3EA]">
 				<div class="max-w-[1440px] mx-auto container">
-					<div class="max-w-[1290px] mx-auto">
-						<div class="flex flex-col ]">
-							<div class="max-w-[941px] mx-auto text-center pt-[86px] pb-[145px]">
-								<h2 class="font-bold text-[70px] leading-[76px] tracking-[-2px]">
+					<div class="max-w-[1290px] mx-auto px-4 md:px-8">
+						<div class="flex flex-col">
+							<div class="max-w-[941px] mx-auto text-center py-12 md:py-16 lg:pt-[86px] lg:pb-[145px]">
+								<h2 class="font-bold text-3xl md:text-5xl lg:text-[70px] leading-tight md:leading-[76px] tracking-[-2px]">
 									PostPilot makes it a
-									<span class="text-green font-grace font-normal text-[90px]"
+									<span class="text-green font-grace font-normal text-4xl md:text-6xl lg:text-[90px]"
 										>cinch</span
 									>
 									to send personalized, profit-generating postcards.
 								</h2>
 							</div>
-							<div class="flex flex-col pt-[63px] pb-[73px]">
-								<div class="max-w-[516.4375px] max-h-[527.984375px] flex flex-col">
+							<div class="flex flex-col py-8 md:py-12 lg:pt-[63px] lg:pb-[73px]">
+								<div class="max-w-full md:max-w-[516.4375px] flex flex-col">
 									<h3
-										class="max-w-[324.18438720703125px] font-bold text-[60px] leading-[70px] tracking-[-4px] pb-[31px]"
+										class="font-bold text-3xl md:text-4xl lg:text-[60px] leading-tight md:leading-[70px] tracking-[-2px] md:tracking-[-4px] pb-4 md:pb-[31px]"
 									>
 										<span
-											class="font-grace font-normal text-green text-[80px] leading-[70px] tracking-[-4px]"
+											class="font-grace font-normal text-green text-4xl md:text-5xl lg:text-[80px] leading-tight md:leading-[70px] tracking-[-2px] md:tracking-[-4px]"
 											>Powerful</span
 										>
 										acquisition <br />
 										& retention
 									</h3>
-									<div class="flex flex-col gap-[48px]">
+									<div class="flex flex-col gap-6 md:gap-[48px]">
 										<p
-											class="font-[500] text-[20px] leading-[34px] text-[#58595D] max-w-[485.34063720703125px]"
+											class="font-[500] text-base md:text-lg lg:text-[20px] leading-relaxed md:leading-[34px] text-[#58595D] max-w-full md:max-w-[485.34063720703125px]"
 										>
 											Send one-off or triggered campaigns to customers & prospects. Target
 											email leads with MailMatch™.
 										</p>
-										<fieldset class="border-2 border-[#D1C7BE] rounded-[15px] p-[34px]">
+										<fieldset class="border-2 border-[#D1C7BE] rounded-[15px] p-4 md:p-[34px]">
 											<legend class="px-2"><img src="images/legend.png" alt="" /></legend>
 
 											<div class="flex flex-col gap-[16px]">
 												<p
-													class="font-[500] text-[16px] leading-[30px] text-[#58595D] max-w-[426.09063720703125px] italic"
+													class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D] max-w-full md:max-w-[426.09063720703125px] italic"
 												>
-													It’s like Klaviyo for direct mail. The results are absolutely
+													It's like Klaviyo for direct mail. The results are absolutely
 													insane.
 												</p>
 												<div class="flex justify-between">
 													<span
-														class="font-normal text-[16px] leading-[22px] text-[#A89B90] font-roboto"
+														class="font-normal text-sm md:text-[16px] leading-tight md:leading-[22px] text-[#A89B90] font-roboto"
 														>Ash Melwani, CMO</span
 													>
-													<img src="images/sec4img1.png" alt="" width="53px" height="23px" />
+													<img src="images/sec4img1.png" alt="" class="w-auto h-[23px]" />
 												</div>
 											</div>
 										</fieldset>
 									</div>
 								</div>
 							</div>
-							<div class="flex flex-col items-end py-[128px]">
-								<div class="max-w-[645.5625px] max-h-[557.984375px] flex flex-col">
+							<div class="flex flex-col md:items-end py-12 md:py-16 lg:py-[128px]">
+								<div class="max-w-full md:max-w-[645.5625px] flex flex-col">
 									<h3
-										class="max-w-[626.5750122070312px] font-bold text-[60px] leading-[70px] tracking-[-4px] pb-[31px]"
+										class="font-bold text-3xl md:text-4xl lg:text-[60px] leading-tight md:leading-[70px] tracking-[-2px] md:tracking-[-4px] pb-4 md:pb-[31px]"
 									>
 										<span
-											class="font-grace font-normal text-green text-[80px] leading-[70px] tracking-[-4px]"
+											class="font-grace font-normal text-green text-4xl md:text-5xl lg:text-[80px] leading-tight md:leading-[70px] tracking-[-2px] md:tracking-[-4px]"
 											>Fight back</span
 										>
-										against iOS updates, jacked-up <br />
+										against iOS updates, jacked-up <br class="hidden md:block" />
 										CPCs & spam folders
 									</h3>
-									<div class="flex flex-col gap-[48px]">
+									<div class="flex flex-col gap-6 md:gap-[48px]">
 										<p
-											class="font-[500] text-[20px] leading-[34px] text-[#58595D] max-w-[622.3562622070312px]"
+											class="font-[500] text-base md:text-lg lg:text-[20px] leading-relaxed md:leading-[34px] text-[#58595D] max-w-full md:max-w-[622.3562622070312px]"
 										>
 											Deliver your message to all of your customers — for less than the
 											cost of a click.
 										</p>
-										<fieldset class="border-2 border-[#D1C7BE] rounded-[15px] p-[34px]">
+										<fieldset class="border-2 border-[#D1C7BE] rounded-[15px] p-4 md:p-[34px]">
 											<legend class="px-2"><img src="images/legend.png" alt="" /></legend>
 
 											<div class="flex flex-col gap-[16px]">
 												<p
-													class="font-[500] text-[16px] leading-[30px] text-[#58595D] max-w-[563.9187622070312px] italic"
+													class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D] max-w-full md:max-w-[563.9187622070312px] italic"
 												>
 													PostPilot is our new weapon against sinking email engagement and
-													rising PPC costs. The results and ROI have been outstanding. It’s
+													rising PPC costs. The results and ROI have been outstanding. It's
 													now one of our core marketing channels to increase acquisition &
 													LTV.
 												</p>
 												<div class="flex justify-between">
 													<span
-														class="font-normal text-[16px] leading-[22px] text-[#A89B90] font-roboto"
+														class="font-normal text-sm md:text-[16px] leading-tight md:leading-[22px] text-[#A89B90] font-roboto"
 														>Leah Keith, GM</span
 													>
-													<img src="images/sec4img2.png" alt="" width="32px" height="23px" />
+													<img src="images/sec4img2.png" alt="" class="w-auto h-[23px]" />
 												</div>
 											</div>
 										</fieldset>
 									</div>
 								</div>
 							</div>
-							<div class="flex flex-col pb-[96px]">
-								<div class="max-w-[516.4375px] flex flex-col">
+							<div class="flex flex-col pb-12 md:pb-[96px]">
+								<div class="max-w-full md:max-w-[516.4375px] flex flex-col">
 									<h3
-										class="max-w-[293px] max-h-[70px] font-bold text-[58px] leading-[70px] tracking-[-2px] mb-[31px]"
+										class="font-bold text-3xl md:text-4xl lg:text-[58px] leading-tight md:leading-[70px] tracking-[-1px] md:tracking-[-2px] mb-4 md:mb-[31px]"
 									>
 										Done for
 										<span
-											class="font-grace font-normal text-green text-[58px] leading-[70px] tracking-[-2px]"
+											class="font-grace font-normal text-green text-3xl md:text-4xl lg:text-[58px] leading-tight md:leading-[70px] tracking-[-1px] md:tracking-[-2px]"
 											>you</span
 										>
 									</h3>
-									<div class="flex flex-col gap-[48px]">
+									<div class="flex flex-col gap-6 md:gap-[48px]">
 										<p
-											class="font-[500] text-[20px] leading-[34px] text-[#58595D] max-w-[482.87188720703125px]"
+											class="font-[500] text-base md:text-lg lg:text-[20px] leading-relaxed md:leading-[34px] text-[#58595D] max-w-full md:max-w-[482.87188720703125px]"
 										>
 											From design & strategy to stamp-licking, our ecom experts help you
 											every step of the way.
 										</p>
-										<fieldset class="border-2 border-[#D1C7BE] rounded-[15px] p-[34px]">
+										<fieldset class="border-2 border-[#D1C7BE] rounded-[15px] p-4 md:p-[34px]">
 											<legend class="px-2"><img src="images/legend.png" alt="" /></legend>
 
 											<div class="flex flex-col gap-[16px]">
 												<p
-													class="font-[500] text-[16px] leading-[30px] text-[#58595D] max-w-[412.73126220703125px] italic"
+													class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D] max-w-full md:max-w-[412.73126220703125px] italic"
 												>
-													The team is so knowledgeable and beyond helpful. I’m blown away by
+													The team is so knowledgeable and beyond helpful. I'm blown away by
 													their communication, detail, and attentiveness and always feel like
 													they have our best interest in mind. Definitely worth a try.
 												</p>
 												<div class="flex justify-between">
 													<span
-														class="font-normal text-[16px] leading-[22px] text-[#A89B90] font-roboto"
+														class="font-normal text-sm md:text-[16px] leading-tight md:leading-[22px] text-[#A89B90] font-roboto"
 														>Holly Davies, Marketing Director</span
 													>
-													<img src="images/sec4img3.png" alt="" width="88px" height="23px" />
+													<img src="images/sec4img3.png" alt="" class="w-auto h-[23px]" />
 												</div>
 											</div>
 										</fieldset>
-										<div class="">
+										<div class="mt-4">
 											<a
 												href=""
-												class="font-medium text-[13px] text-white leading-[20px] pt-[22px] pr-[66.05px] pb-[22px] pl-[65px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[15px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300 uppercase tracking-[1.2px]"
+												class="inline-block font-medium text-xs md:text-[13px] text-white leading-[20px] py-4 px-8 md:pt-[22px] md:pr-[66.05px] md:pb-[22px] md:pl-[65px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[15px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300 uppercase tracking-[1.2px]"
 												>Try it Risk-free</a
 											>
 										</div>
@@ -368,33 +492,33 @@
 			=============================================-->
 			<section class="">
 				<div class="max-w-[1440px] mx-auto container">
-					<div class="max-w-[1290px] mx-auto">
-						<div class="pt-[114px] pb-[63px]">
+					<div class="max-w-[1290px] mx-auto px-4 md:px-8">
+						<div class="py-12 md:py-16 lg:pt-[114px] lg:pb-[63px]">
 							<h2
-								class="font-bold text-[64px] leading-[76px] tracking-[-2px] text-center"
+								class="font-bold text-3xl md:text-5xl lg:text-[64px] leading-tight md:leading-[76px] tracking-[-2px] text-center"
 							>
-								Everything your brand needs to <br />
+								Everything your brand needs to <br class="hidden md:block" />
 								<span
-									class="font-normal font-grace text-green text-center text-[70px] leading-[100px] tracking-[-4px]"
+									class="font-normal font-grace text-green text-center text-4xl md:text-5xl lg:text-[70px] leading-tight md:leading-[100px] tracking-[-2px] md:tracking-[-4px]"
 									>make your brand unforgettable</span
 								>
 							</h2>
 						</div>
-						<div class="grid grid-cols-3 gap-[30px] pb-[96px]">
+						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[30px] pb-12 md:pb-[96px]">
 							<div
-								class="bg-[#FDF3EA] max-w-[410px] max-h-[506.53125px] rounded-[13px] p-[40px] flex flex-col items-center gap-[48px]"
+								class="bg-[#FDF3EA] rounded-[13px] p-6 md:p-[40px] flex flex-col items-center gap-6 md:gap-[48px]"
 							>
-								<div class="max-w-[330px] max-h-[208px]">
-									<img src="images/sec5img1.png" alt="" />
+								<div class="max-w-full md:max-w-[330px]">
+									<img src="images/sec5img1.png" alt="" class="w-full h-auto" />
 								</div>
 								<div class="flex flex-col gap-[8px]">
 									<h3
-										class="font-bold text-[28px] leading-[36px] max-w-[307px] text-center"
+										class="font-bold text-xl md:text-2xl lg:text-[28px] leading-tight md:leading-[36px] text-center"
 									>
 										Plug-and-play with your stack
 									</h3>
 									<p
-										class="font-[500] text-[16px] leading-[30px] text-center max-w-[312px] text-[#58595D]"
+										class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-center text-[#58595D]"
 									>
 										Native integrations provide seamless segmentation, automation &
 										tracking. No clunky spreadsheets.
@@ -402,39 +526,39 @@
 								</div>
 							</div>
 							<div
-								class="bg-[#E0F8F2] max-w-[410px] max-h-[506.53125px] rounded-[13px] p-[40px] flex flex-col items-center gap-[48px]"
+								class="bg-[#E0F8F2] rounded-[13px] p-6 md:p-[40px] flex flex-col items-center gap-6 md:gap-[48px]"
 							>
-								<div class="max-w-[330px] max-h-[208px]">
-									<img src="images/sec5img2.png" alt="" />
+								<div class="max-w-full md:max-w-[330px]">
+									<img src="images/sec5img2.png" alt="" class="w-full h-auto" />
 								</div>
 								<div class="flex flex-col gap-[8px]">
 									<h3
-										class="font-bold text-[28px] leading-[36px] max-w-[307px] text-center"
+										class="font-bold text-xl md:text-2xl lg:text-[28px] leading-tight md:leading-[36px] text-center"
 									>
 										Run campaigns <br />
 										on autopilot
 									</h3>
 									<p
-										class="font-[500] text-[16px] leading-[30px] text-center max-w-[315px] text-[#58595D]"
+										class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-center text-[#58595D]"
 									>
 										Ink profits while you sleep: Just set it and forget it.
 									</p>
 								</div>
 							</div>
 							<div
-								class="bg-[#EEECFF] max-w-[410px] max-h-[506.53125px] rounded-[13px] p-[40px] flex flex-col items-center gap-[48px]"
+								class="bg-[#EEECFF] rounded-[13px] p-6 md:p-[40px] flex flex-col items-center gap-6 md:gap-[48px]"
 							>
-								<div class="max-w-[330px] max-h-[208px]">
-									<img src="images/sec5img3.png" alt="" />
+								<div class="max-w-full md:max-w-[330px]">
+									<img src="images/sec5img3.png" alt="" class="w-full h-auto" />
 								</div>
 								<div class="flex flex-col gap-[8px]">
 									<h3
-										class="font-bold text-[26px] leading-[36px] max-w-[317px] w-full text-center"
+										class="font-bold text-xl md:text-2xl lg:text-[26px] leading-tight md:leading-[36px] text-center"
 									>
 										Real-time ROI dashboard
 									</h3>
 									<p
-										class="font-[500] text-[16px] leading-[30px] text-center max-w-[315px] text-[#58595D]"
+										class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-center text-[#58595D]"
 									>
 										Track performance of every postcard by customer or discount code. Your
 										CFO will love it.
@@ -442,19 +566,19 @@
 								</div>
 							</div>
 							<div
-								class="bg-[#D9F2F7] max-w-[410px] max-h-[506.53125px] rounded-[13px] p-[40px] flex flex-col items-center gap-[48px]"
+								class="bg-[#D9F2F7] rounded-[13px] p-6 md:p-[40px] flex flex-col items-center gap-6 md:gap-[48px]"
 							>
-								<div class="max-w-[330px] max-h-[208px]">
-									<img src="images/sec5img4.png" alt="" />
+								<div class="max-w-full md:max-w-[330px]">
+									<img src="images/sec5img4.png" alt="" class="w-full h-auto" />
 								</div>
 								<div class="flex flex-col gap-[8px]">
 									<h3
-										class="font-bold text-[26px] leading-[36px] max-w-[313px] text-center"
+										class="font-bold text-xl md:text-2xl lg:text-[26px] leading-tight md:leading-[36px] text-center"
 									>
 										Deliver WOW with *real* handwritten cards
 									</h3>
 									<p
-										class="font-[500] text-[16px] leading-[30px] text-center max-w-[310px] text-[#58595D]"
+										class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-center text-[#58595D]"
 									>
 										Our proprietary robots use real pens and ink for an unforgettable VIP
 										touch.
@@ -462,39 +586,39 @@
 								</div>
 							</div>
 							<div
-								class="bg-[#FAEDED] max-w-[410px] max-h-[506.53125px] rounded-[13px] p-[40px] flex flex-col items-center gap-[48px]"
+								class="bg-[#FAEDED] rounded-[13px] p-6 md:p-[40px] flex flex-col items-center gap-6 md:gap-[48px]"
 							>
-								<div class="max-w-[330px] max-h-[208px]">
-									<img src="images/sec5img5.png" alt="" />
+								<div class="max-w-full md:max-w-[330px]">
+									<img src="images/sec5img5.png" alt="" class="w-full h-auto" />
 								</div>
 								<div class="flex flex-col gap-[8px]">
 									<h3
-										class="font-bold text-[25px] leading-[36px] max-w-[332px] text-center"
+										class="font-bold text-xl md:text-2xl lg:text-[25px] leading-tight md:leading-[36px] text-center"
 									>
 										Predictable pricing
 									</h3>
 									<p
-										class="font-[500] text-[16px] leading-[30px] text-center max-w-[312px] text-[#58595D]"
+										class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-center text-[#58595D]"
 									>
-										Unlike CPCs, postage rates don’t change based on competition or who
-										you’re targeting.
+										Unlike CPCs, postage rates don't change based on competition or who
+										you're targeting.
 									</p>
 								</div>
 							</div>
 							<div
-								class="bg-[#F1F1F1] max-w-[410px] max-h-[506.53125px] rounded-[13px] p-[40px] flex flex-col items-center gap-[48px]"
+								class="bg-[#F1F1F1] rounded-[13px] p-6 md:p-[40px] flex flex-col items-center gap-6 md:gap-[48px]"
 							>
-								<div class="max-w-[330px] max-h-[208px]">
-									<img src="images/sec5img6.png" alt="" />
+								<div class="max-w-full md:max-w-[330px]">
+									<img src="images/sec5img6.png" alt="" class="w-full h-auto" />
 								</div>
 								<div class="flex flex-col gap-[8px]">
 									<h3
-										class="font-bold text-[28px] leading-[36px] max-w-[329px] text-center"
+										class="font-bold text-xl md:text-2xl lg:text-[28px] leading-tight md:leading-[36px] text-center"
 									>
 										Complimentary concierge service
 									</h3>
 									<p
-										class="font-[500] text-[16px] leading-[30px] text-center max-w-[324px] text-[#58595D]"
+										class="font-[500] text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-center text-[#58595D]"
 									>
 										DTC is in our DNA. Our pros will build your strategy and custom
 										designs using battle-tested best practices.
@@ -510,68 +634,68 @@
 			=============================================-->
 			<section class="bg-[#E3F8F8]">
 				<div class="max-w-[1440px] mx-auto container">
-					<div class="max-w-[1290px] mx-auto py-[96px]">
-						<div class="max-w-[680px] mx-auto text-center pt-[10px] pb-[59px]">
-							<h2 class="font-bold text-[60px] leading-[76px] tracking-[-2px]">
+					<div class="max-w-[1290px] mx-auto px-4 md:px-8 py-12 md:py-[96px]">
+						<div class="max-w-[680px] mx-auto text-center pt-2 md:pt-[10px] pb-8 md:pb-[59px]">
+							<h2 class="font-bold text-3xl md:text-5xl lg:text-[60px] leading-tight md:leading-[76px] tracking-[-2px]">
 								Fast launch. Fast results.
 								<span
-									class="font-normal text-green font-grace text-[60px] leading-[76px] tracking-[-2px]"
+									class="font-normal text-green font-grace text-3xl md:text-5xl lg:text-[60px] leading-tight md:leading-[76px] tracking-[-2px]"
 								>
 									Here's how.</span
 								>
 							</h2>
 						</div>
 						<div class="">
-							<div class="max-w-[544.875px] flex flex-col gap-[32px] items-start">
-								<div class="flex gap-[40px]">
+							<div class="max-w-full md:max-w-[544.875px] flex flex-col gap-6 md:gap-[32px] items-start">
+								<div class="flex gap-4 md:gap-[40px] items-center">
 									<span
-										class="font-normal text-green font-grace text-[48px] leading-[50px] tracking-[4px] text-center"
+										class="font-normal text-green font-grace text-3xl md:text-4xl lg:text-[48px] leading-tight md:leading-[50px] tracking-[2px] md:tracking-[4px] text-center"
 										>01</span
 									>
 									<h5
-										class="font-bold text-[#2E2F3566] text-[36px] leading-[44px] tracking-[-0.5px] pl-[15px]"
+										class="font-bold text-[#2E2F3566] text-2xl md:text-3xl lg:text-[36px] leading-tight md:leading-[44px] tracking-[-0.5px] pl-0 md:pl-[15px]"
 									>
 										Segment
 									</h5>
 								</div>
-								<div class="flex gap-[40px]">
+								<div class="flex gap-4 md:gap-[40px] items-center">
 									<span
-										class="font-normal text-green font-grace text-[48px] leading-[50px] tracking-[4px] text-center"
+										class="font-normal text-green font-grace text-3xl md:text-4xl lg:text-[48px] leading-tight md:leading-[50px] tracking-[2px] md:tracking-[4px] text-center"
 										>02</span
 									>
 									<h5
-										class="font-bold text-[#2E2F3566] text-[36px] leading-[44px] tracking-[-0.5px] text-center"
+										class="font-bold text-[#2E2F3566] text-2xl md:text-3xl lg:text-[36px] leading-tight md:leading-[44px] tracking-[-0.5px] text-center"
 									>
 										Design
 									</h5>
 								</div>
-								<div class="flex gap-[40px]">
+								<div class="flex gap-4 md:gap-[40px]">
 									<div class="flex flex-col items-center justify-center">
 										<span
-											class="font-normal text-green font-grace text-[48px] leading-[50px] tracking-[4px] text-center"
+											class="font-normal text-green font-grace text-3xl md:text-4xl lg:text-[48px] leading-tight md:leading-[50px] tracking-[2px] md:tracking-[4px] text-center"
 											>03</span
 										>
 										<span><img src="images/line.png" alt="" /></span>
 									</div>
-									<div class="flex flex-col max-w-[424px]">
+									<div class="flex flex-col max-w-full md:max-w-[424px]">
 										<h5
-											class="font-bold text-[#2E2F35] text-[36px] leading-[44px] tracking-[-0.5px]"
+											class="font-bold text-[#2E2F35] text-2xl md:text-3xl lg:text-[36px] leading-tight md:leading-[44px] tracking-[-0.5px]"
 										>
 											Send
 										</h5>
-										<p class="font-[500] text-[20px] leading-[34px] text-[#58595D]">
+										<p class="font-[500] text-base md:text-lg lg:text-[20px] leading-relaxed md:leading-[34px] text-[#58595D]">
 											One-off announcements or automatically triggered flows. Customers
 											receive their personalized cards within a week.
 										</p>
 									</div>
 								</div>
-								<div class="flex gap-[40px]">
+								<div class="flex gap-4 md:gap-[40px] items-center">
 									<span
-										class="font-normal text-green font-grace text-[48px] leading-[50px] tracking-[4px] text-center"
+										class="font-normal text-green font-grace text-3xl md:text-4xl lg:text-[48px] leading-tight md:leading-[50px] tracking-[2px] md:tracking-[4px] text-center"
 										>04</span
 									>
 									<h5
-										class="font-bold text-[#2E2F3566] text-[36px] leading-[44px] tracking-[-0.5px] text-center"
+										class="font-bold text-[#2E2F3566] text-2xl md:text-3xl lg:text-[36px] leading-tight md:leading-[44px] tracking-[-0.5px] text-center"
 									>
 										Convert
 									</h5>
@@ -587,10 +711,10 @@
 			<section class="">
 				<div class="max-w-[1440px] mx-auto container">
 					<div
-						class="flex flex-col items-center justify-center py-[95px] gap-[74px]"
+						class="flex flex-col items-center justify-center py-12 md:py-[95px] gap-8 md:gap-[74px] px-4 md:px-8"
 					>
-						<div class="max-w-[584px]">
-							<h2 class="font-bold text-[63px] leading-[76px] tracking-[-2px]">
+						<div class="max-w-[584px] text-center">
+							<h2 class="font-bold text-3xl md:text-5xl lg:text-[63px] leading-tight md:leading-[76px] tracking-[-2px]">
 								PostPilot is 🔥 for <span class="font-grace text-green">DTC</span>
 							</h2>
 						</div>
@@ -598,7 +722,7 @@
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div
-										class="max-w-[410px] p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
+										class="max-w-[410px] p-4 md:p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
 									>
 										<div class="flex justify-between items-center">
 											<div class="flex gap-[16px] items-center">
@@ -606,9 +730,9 @@
 													<img src="images/sec7img4.jpeg" alt="" class="size-[64px]" />
 												</div>
 												<div class="flex flex-col items-start">
-													<span class="text-[15px] leading-[18px] font-medium"
+													<span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>Jon Tucker</span
-													><span class="text-[15px] leading-[18px] font-medium"
+													><span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>@JonTuckerUSA</span
 													>
 												</div>
@@ -619,7 +743,7 @@
 										</div>
 
 										<div class="">
-											<p class="font-medium text-[16px] leading-[30px] text-[#58595D]">
+											<p class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D]">
 												Email is a killer channel, but if you layer in postal mail you can
 												really supercharge results. The team at
 												<span class="font-bold">@getpostpilot</span> will spark ideas for
@@ -630,7 +754,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="max-w-[410px] p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
+										class="max-w-[410px] p-4 md:p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
 									>
 										<div class="flex justify-between items-center">
 											<div class="flex gap-[16px] items-center">
@@ -638,9 +762,9 @@
 													<img src="images/sec7img1.png" alt="" class="size-[64px]" />
 												</div>
 												<div class="flex flex-col items-start">
-													<span class="text-[15px] leading-[18px] font-medium"
+													<span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>Helen Guo</span
-													><span class="text-[15px] leading-[18px] font-medium"
+													><span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>@HelenGuo_</span
 													>
 												</div>
@@ -651,7 +775,7 @@
 										</div>
 
 										<div class="">
-											<p class="font-medium text-[16px] leading-[30px] text-[#58595D]">
+											<p class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D]">
 												Been using <span class="font-bold">PostPilot</span> for years. Good
 												for re-engagement. And you can get creative with your messaging.
 											</p>
@@ -660,7 +784,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="max-w-[410px] p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
+										class="max-w-[410px] p-4 md:p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
 									>
 										<div class="flex justify-between items-center">
 											<div class="flex gap-[16px] items-center">
@@ -668,9 +792,9 @@
 													<img src="images/sec7img2.png" alt="" class="size-[64px]" />
 												</div>
 												<div class="flex flex-col items-start">
-													<span class="text-[15px] leading-[18px] font-medium"
+													<span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>Nathan Woods</span
-													><span class="text-[15px] leading-[18px] font-medium"
+													><span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>@HeisNathan</span
 													>
 												</div>
@@ -681,7 +805,7 @@
 										</div>
 
 										<div class="">
-											<p class="font-medium text-[16px] leading-[30px] text-[#58595D]">
+											<p class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D]">
 												We have done some rad winbacks to 360-720 days since purchase that
 												have rocked. <span class="font-bold">PostPilot</span> team is one of
 												my favs.
@@ -691,7 +815,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="max-w-[410px] p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
+										class="max-w-[410px] p-4 md:p-[34px] flex flex-col gap-[16px] border-2 border-[#2E2F35] rounded-[15px]"
 									>
 										<div class="flex justify-between items-center">
 											<div class="flex gap-[16px] items-center">
@@ -699,9 +823,9 @@
 													<img src="images/sec7img3.png" alt="" class="size-[64px]" />
 												</div>
 												<div class="flex flex-col items-start">
-													<span class="text-[15px] leading-[18px] font-medium"
+													<span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>Chris Lander</span
-													><span class="text-[15px] leading-[18px] font-medium"
+													><span class="text-sm md:text-[15px] leading-tight md:leading-[18px] font-medium"
 														>@chris_basis</span
 													>
 												</div>
@@ -712,7 +836,7 @@
 										</div>
 
 										<div class="">
-											<p class="font-medium text-[16px] leading-[30px] text-[#58595D]">
+											<p class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D]">
 												Another +1 for <span class="font-bold">PostPilot</span>. Have only
 												done winbacks, but it's been wonderful. Their team is also top
 												notch. Super helpful every time we set something up.
@@ -723,10 +847,10 @@
 							</div>
 						</div>
 
-						<div class="">
+						<div class="mt-4">
 							<a
 								href=""
-								class="font-medium text-[13px] text-white leading-[20px] pt-[22px] pr-[66.05px] pb-[22px] pl-[65px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[15px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300 uppercase tracking-[1.2px]"
+								class="inline-block font-medium text-xs md:text-[13px] text-white leading-[20px] py-4 px-8 md:pt-[22px] md:pr-[66.05px] md:pb-[22px] md:pl-[65px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[15px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300 uppercase tracking-[1.2px]"
 								>Try it Risk-free</a
 							>
 						</div>
@@ -738,57 +862,57 @@
 			=============================================-->
 			<section class="bg-[#EEECFF]">
 				<div class="max-w-[1440px] mx-auto container">
-					<div class="max-w-[1290px] mx-auto py-[96px]">
-						<div class="flex flex-col gap-[48px]">
-							<div class="flex gap-[64px]">
-								<div class="py-[5.25px] w-1/2">
-									<img src="images/sec8img1.png" alt="" />
+					<div class="max-w-[1290px] mx-auto px-4 md:px-8 py-12 md:py-[96px]">
+						<div class="flex flex-col gap-8 md:gap-[48px]">
+							<div class="flex flex-col lg:flex-row gap-8 md:gap-[64px]">
+								<div class="py-[5.25px] w-full lg:w-1/2">
+									<img src="images/sec8img1.png" alt="" class="w-full h-auto" />
 								</div>
-								<div class="flex flex-col gap-[36px] w-1/2">
-									<div class="text-left max-w-[565px]">
-										<h2 class="font-bold text-[63px] leading-[76px] tracking-[-2px]">
+								<div class="flex flex-col gap-6 md:gap-[36px] w-full lg:w-1/2">
+									<div class="text-left max-w-full md:max-w-[565px]">
+										<h2 class="font-bold text-3xl md:text-5xl lg:text-[63px] leading-tight md:leading-[76px] tracking-[-2px]">
 											How
 											<span class="font-normal font-grace text-green">Obvi</span> Drives
 											Profits with Hands-Off Postcard Campaigns
 										</h2>
 									</div>
-									<div class="flex flex-col gap-[48px]">
+									<div class="flex flex-col gap-6 md:gap-[48px]">
 										<p
-											class="font-medium text-[20px] leading-[34px] text-[#58595D] max-w-[555px]"
+											class="font-medium text-base md:text-lg lg:text-[20px] leading-relaxed md:leading-[34px] text-[#58595D] max-w-full md:max-w-[555px]"
 										>
 											The 🚀 supplements brand wanted to offset high ad costs and reach
 											dormant customers. They scored 1000%+ ROIs.
 										</p>
-										<div class="flex max-w-[613px] justify-between">
+										<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-full md:max-w-[613px]">
 											<div class="flex flex-col gap-[2px]">
 												<span
-													class="font-bold text-[34px] leading-[30px] tracking-[-1px] text-[#2E2F35]"
+													class="font-bold text-2xl md:text-3xl lg:text-[34px] leading-tight md:leading-[30px] tracking-[-1px] text-[#2E2F35]"
 													>1468%</span
-												><span class="font-medium text-[14px] leading-[22px] text-[#58595D]"
+												><span class="font-medium text-sm md:text-[14px] leading-tight md:leading-[22px] text-[#58595D]"
 													>ROI</span
 												>
 											</div>
 											<div class="flex flex-col gap-[2px]">
 												<span
-													class="font-bold text-[35px] leading-[30px] tracking-[-1px] text-[#2E2F35]"
+													class="font-bold text-2xl md:text-3xl lg:text-[35px] leading-tight md:leading-[30px] tracking-[-1px] text-[#2E2F35]"
 													>8.59%</span
-												><span class="font-medium text-[14px] leading-[22px] text-[#58595D]"
+												><span class="font-medium text-sm md:text-[14px] leading-tight md:leading-[22px] text-[#58595D]"
 													>Conversion Rate</span
 												>
 											</div>
 											<div class="flex flex-col gap-[2px]">
 												<span
-													class="font-bold text-[34px] leading-[30px] tracking-[-1px] text-[#2E2F35]"
+													class="font-bold text-2xl md:text-3xl lg:text-[34px] leading-tight md:leading-[30px] tracking-[-1px] text-[#2E2F35]"
 													>$73,457</span
-												><span class="font-medium text-[14px] leading-[22px] text-[#58595D]"
+												><span class="font-medium text-sm md:text-[14px] leading-tight md:leading-[22px] text-[#58595D]"
 													>Sales Generated</span
 												>
 											</div>
 										</div>
-										<div class="">
+										<div class="mt-4">
 											<div class="">
 												<button
-													class="font-medium text-[15px] leading-[18px] pt-[22px] pr-[42px] pb-[22px] pl-[42px] bg-[#FFFFFF] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300"
+													class="inline-block font-medium text-sm md:text-[15px] leading-tight md:leading-[18px] py-4 px-6 md:pt-[22px] md:pr-[42px] md:pb-[22px] md:pl-[42px] bg-[#FFFFFF] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300"
 												>
 													Read Case study
 												</button>
@@ -797,20 +921,25 @@
 									</div>
 								</div>
 							</div>
-							<div class="">
-								<div class="swiper">
+							<div class="flex flex-col lg:flex-row">
+								<div class="w-full lg:w-1/2"></div>
+								<div class="swiper swiper1 w-full lg:w-1/2 pl-0 md:pl-[10px] mt-4 lg:mt-0">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
-											<img src="images/sec8img2.png" alt="" ">
+											<img
+												src="images/sec8img2.png"
+												alt=""
+												class="w-auto h-[27px]"
+											/>
 										</div>
 										<div class="swiper-slide">
-											<img src="images/sec8img3.png" alt="" />
+											<img src="images/sec8img3.png" alt="" class="w-auto h-[27px]" />
 										</div>
 										<div class="swiper-slide">
-											<img src="images/sec8img4.png" alt="" />
+											<img src="images/sec8img4.png" alt="" class="w-auto h-[27px]" />
 										</div>
 										<div class="swiper-slide">
-											<img src="images/sec8img5.png" alt="" />
+											<img src="images/sec8img5.png" alt="" class="w-auto h-[27px]" />
 										</div>
 									</div>
 								</div>
@@ -823,25 +952,25 @@
 		          			Section 9
 			=============================================-->
 			<section class="bg-[#FF6D2C] overflow-hidden">
-				<div class="max-w-[1440px] mx-auto container ">
-					<div class="max-w-[1360px] mx-auto">
+				<div class="max-w-[1440px] mx-auto container">
+					<div class="max-w-[1360px] mx-auto px-4 md:px-8">
 						<div class="flex relative text-white">
-							<div class="flex flex-col gap-[17px] py-[96px]">
-								<div class="max-w-[509px]">
-									<h2 class="font-bold text-[81px] leading-[96px]">
+							<div class="flex flex-col gap-4 md:gap-[17px] py-12 md:py-[96px]">
+								<div class="max-w-full md:max-w-[509px]">
+									<h2 class="font-bold text-4xl md:text-6xl lg:text-[81px] leading-tight md:leading-[96px]">
 										Try PostPilot Risk-Free
 									</h2>
 								</div>
 								<div class="flex flex-col">
 									<p
-										class="font-medium text-[20px] leading-[34px] max-w-[507px] mb-[48px]"
+										class="font-medium text-base md:text-lg lg:text-[20px] leading-relaxed md:leading-[34px] max-w-full md:max-w-[507px] mb-6 md:mb-[48px]"
 									>
 										No contracts. No commitments. Guaranteed results.*
 									</p>
-									<div class="flex gap-[40px] items-center mb-[31px]">
+									<div class="flex flex-col sm:flex-row gap-6 md:gap-[40px] items-start sm:items-center mb-6 md:mb-[31px]">
 										<div class="">
 											<a
-												class="font-medium text-black text-[15px] leading-[18px] pt-[22px] pr-[44px] pb-[22px] pl-[44px] bg-[#FFFFFF] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300"
+												class="inline-block font-medium text-black text-sm md:text-[15px] leading-tight md:leading-[18px] py-4 px-6 md:pt-[22px] md:pr-[44px] md:pb-[22px] md:pl-[44px] bg-[#FFFFFF] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300"
 											>
 												GET STARTED
 											</a>
@@ -852,12 +981,14 @@
 											<span>5.0 Shopify Rating</span>
 										</div>
 									</div>
-									<p class="font-medium text-[14px] leading-[22px] text-[#FFFFFFB2]">
+									<p class="font-medium text-xs md:text-[14px] leading-tight md:leading-[22px] text-[#FFFFFFB2]">
 										* for qualified brands with over $1m annual Shopify revenue.
 									</p>
 								</div>
 							</div>
-							<div class="absolute bottom-[-3px] right-[83px]"><img src="images/sec9img1.png" alt="" /></div>
+							<div class="hidden lg:block absolute bottom-[-3px] right-[83px]">
+								<img src="images/sec9img1.png" alt="" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -867,47 +998,47 @@
 			=============================================-->
 			<section class="bg-[#F3FAFA]">
 				<div class="max-w-[1440px] mx-auto container">
-					<div class="max-w-[1290px] mx-auto py-[96px]">
-						<div class="flex flex-col items-center gap-[74px]">
-							<div class="max-w-[662px]">
-								<h2 class="font-bold text-[68px] leading-[76px] tracking-[-2px]">
+					<div class="max-w-[1290px] mx-auto px-4 md:px-8 py-12 md:py-[96px]">
+						<div class="flex flex-col items-center gap-8 md:gap-[74px]">
+							<div class="max-w-[662px] text-center">
+								<h2 class="font-bold text-3xl md:text-5xl lg:text-[68px] leading-tight md:leading-[76px] tracking-[-2px]">
 									Latest trends &
 									<span class="text-green font-grace font-normal">insights</span>
 								</h2>
 							</div>
-							<div class="flex gap-[30px]">
-								<div class="max-w-[410px]">
+							<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[30px]">
+								<div class="max-w-full md:max-w-[410px]">
 									<img
 										src="images/sec10img1.png"
 										alt=""
-										class="w-[410px] h-[272px] rounded-[15px]"
+										class="w-full h-auto md:h-[272px] rounded-[15px]"
 									/>
 									<h6
-										class="max-w-[344.41876220703125px] font-bold text-[26px] text-[#2E2F35] leading-[36px] text-left"
+										class="font-bold text-xl md:text-2xl lg:text-[26px] text-[#2E2F35] leading-tight md:leading-[36px] text-left mt-4"
 									>
 										3 Low-Cost Campaigns You Must Run to Win BFCM
 									</h6>
 								</div>
-								<div class="max-w-[410px]">
+								<div class="max-w-full md:max-w-[410px]">
 									<img
 										src="images/sec10img2.png"
 										alt=""
-										class="w-[410px] h-[272px] rounded-[15px]"
+										class="w-full h-auto md:h-[272px] rounded-[15px]"
 									/>
 									<h6
-										class="max-w-[357.32501220703125px] font-bold text-[28px] text-[#2E2F35] leading-[36px] text-left"
+										class="font-bold text-xl md:text-2xl lg:text-[28px] text-[#2E2F35] leading-tight md:leading-[36px] text-left mt-4"
 									>
 										Postcard Marketing: The Definitive Guide to High ROI [2022]
 									</h6>
 								</div>
-								<div class="max-w-[410px]">
+								<div class="max-w-full md:max-w-[410px]">
 									<img
 										src="images/sec10img3.png"
 										alt=""
-										class="w-[410px] h-[272px] rounded-[15px]"
+										class="w-full h-auto md:h-[272px] rounded-[15px]"
 									/>
 									<h6
-										class="max-w-[357.54376220703125px] font-bold text-[25px] text-[#2E2F35] leading-[36px] text-left"
+										class="font-bold text-xl md:text-2xl lg:text-[25px] text-[#2E2F35] leading-tight md:leading-[36px] text-left mt-4"
 									>
 										The Ultimate Guide to Thank You Notes for Ecommerce
 									</h6>
@@ -923,147 +1054,147 @@
 		=============================================-->
 		<footer class="">
 			<div class="max-w-[1440px] mx-auto container">
-				<div class="max-w-[1290px] mx-auto pt-[96px]">
-					<div class="flex gap-[127px] pb-[96px]">
-						<div class="max-w-[295px] flex flex-col gap-[25px]">
+				<div class="max-w-[1290px] mx-auto px-4 md:px-8 pt-12 md:pt-[96px]">
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-[127px] pb-12 md:pb-[96px]">
+						<div class="flex flex-col gap-4 md:gap-[25px]">
 							<div class="">
-								<img src="images/footerimg1.png" alt="" />
+								<img src="images/footerimg1.png" alt="" class="w-full max-w-[295px]" />
 							</div>
 							<p
-								class="max-w-[277px] font-medium text-[14px] leading-[22px] pb-[25px] text-[#58595D]"
+								class="font-medium text-sm md:text-[14px] leading-relaxed md:leading-[22px] pb-4 md:pb-[25px] text-[#58595D]"
 							>
 								Our paper is sourced from FSC-certified mills. We plant enough trees to
 								more than double our paper usage.
 							</p>
 						</div>
-						<div class="flex flex-col gap-[27px]">
+						<div class="flex flex-col gap-4 md:gap-[27px]">
 							<div class="">
 								<span
-									class="font-bold text-[13px] leading-[18px] tracking-[1.5px] text-[#2E2F35] uppercase"
+									class="font-bold text-xs md:text-[13px] leading-tight md:leading-[18px] tracking-[1.5px] text-[#2E2F35] uppercase"
 									>Company</span
 								>
 							</div>
-							<ul class="flex flex-col gap-[13px]">
+							<ul class="flex flex-col gap-2 md:gap-[13px]">
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>About us</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Partner program</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Career</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Contact us</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Privacy Policy</a
 									>
 								</li>
 							</ul>
 						</div>
-						<div class="flex flex-col gap-[27px]">
+						<div class="flex flex-col gap-4 md:gap-[27px]">
 							<div class="">
 								<span
-									class="font-bold text-[13px] leading-[18px] tracking-[1.5px] text-[#2E2F35] uppercase"
+									class="font-bold text-xs md:text-[13px] leading-tight md:leading-[18px] tracking-[1.5px] text-[#2E2F35] uppercase"
 									>About Us</span
 								>
 							</div>
-							<ul class="flex flex-col gap-[13px]">
+							<ul class="flex flex-col gap-2 md:gap-[13px]">
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Pricing</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Reviews</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Direct Mail Academy</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Success stories</a
 									>
 								</li>
 								<li>
 									<a
 										href=""
-										class="font-medium text-[16px] leading-[30px] text-[#2E2F35]"
+										class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#2E2F35]"
 										>Terms & conditions</a
 									>
 								</li>
 							</ul>
 						</div>
-						<div class="flex flex-col gap-[27px]">
+						<div class="flex flex-col gap-4 md:gap-[27px]">
 							<div class="">
 								<span
-									class="font-bold text-[13px] leading-[18px] tracking-[1.5px] text-[#2E2F35] uppercase"
+									class="font-bold text-xs md:text-[13px] leading-tight md:leading-[18px] tracking-[1.5px] text-[#2E2F35] uppercase"
 									>Contact</span
 								>
 							</div>
 							<div class="flex gap-[10px] items-center">
 								<img src="images/footeremail.png" alt="" />
-								<span class="font-medium text-[15px] leading-[18px] text-[#2E2F35]"
+								<span class="font-medium text-sm md:text-[15px] leading-tight md:leading-[18px] text-[#2E2F35]"
 									>support@postpilot.com</span
 								>
 							</div>
 							<div class="">
-								<p class="font-medium text-[16px] leading-[30px] text-[#58595D]">
+								<p class="font-medium text-sm md:text-[16px] leading-relaxed md:leading-[30px] text-[#58595D]">
 									Printed with ❤️️️ at our facility in South Carolina.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="flex justify-between border-t-1 border-[#E6E6E7]">
-						<div class="py-[49px] flex flex-col items-start">
-							<img src="images/footerlogo.png" alt="" />
-							<span class="font-medium text-[14px] leading-[22px] text-[#58595D]"
+					<div class="flex flex-col md:flex-row justify-between items-center border-t border-[#E6E6E7] py-8 md:py-[49px]">
+						<div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+							<img src="images/footerlogo.png" alt="" class="mb-2" />
+							<span class="font-medium text-xs md:text-[14px] leading-tight md:leading-[22px] text-[#58595D]"
 								>© 2022 PostPilot, Inc. All rights reserved.</span
 							>
 						</div>
-						<div class="flex gap-[16px] py-[7px] items-center">
+						<div class="flex gap-4 md:gap-[16px] items-center">
 							<div class="">
 								<button
-									class="font-medium text-[15px] leading-[18px] pt-[14px] pr-[21.84px] pb-[12px] pl-[22px] bg-[#FFFFFF] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300"
+									class="font-medium text-sm md:text-[15px] leading-tight md:leading-[18px] py-3 px-4 md:pt-[14px] md:pr-[21.84px] md:pb-[12px] md:pl-[22px] bg-[#FFFFFF] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FF6D2C] hover:text-white transition-colors duration-300"
 								>
 									Login
 								</button>
 							</div>
 							<div class="">
 								<button
-									class="font-medium text-[14px text-white leading-[18px] pt-[14px] pr-[25.86px] pb-[12px] pl-[25px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300"
+									class="font-medium text-sm md:text-[14px] text-white leading-tight md:leading-[18px] py-3 px-4 md:pt-[14px] md:pr-[25.86px] md:pb-[12px] md:pl-[25px] bg-[#FF6D2C] border-2 border-[#2E2F35] rounded-[12px] btns hover:bg-[#FFFFFF] hover:text-black transition-colors duration-300"
 								>
 									Try it for free
 								</button>
@@ -1075,8 +1206,31 @@
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const menuToggle = document.getElementById("menu-toggle");
+				const mobileMenu = document.querySelector(".mobile-menu");
+
+				menuToggle.addEventListener("change", function () {
+					if (this.checked) {
+						mobileMenu.style.display = "block";
+					} else {
+						mobileMenu.style.display = "none";
+					}
+				});
+				
+				// Handle mobile menu closing when clicking outside
+				document.addEventListener("click", function(event) {
+					if (menuToggle.checked && !event.target.closest('.mobile-menu') && event.target !== menuToggle && !event.target.closest('label[for="menu-toggle"]')) {
+						menuToggle.checked = false;
+						mobileMenu.style.display = "none";
+					}
+				});
+			});
+			
+			// Initialize Swiper with responsive breakpoints
 			const swiper = new Swiper(".swiper", {
 				slidesPerView: 1,
+				spaceBetween: 20,
 				autoplay: {
 					delay: 1500,
 					disableOnInteraction: false,
@@ -1086,15 +1240,44 @@
 				breakpoints: {
 					640: {
 						slidesPerView: 1,
+						spaceBetween: 20,
 					},
 					768: {
 						slidesPerView: 2,
+						spaceBetween: 30,
 					},
 					1024: {
 						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+				},
+			});
+			
+			const swiper1 = new Swiper(".swiper1", {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				autoplay: {
+					delay: 1500,
+					disableOnInteraction: false,
+				},
+				loop: true,
+				grabCursor: true,
+				breakpoints: {
+					640: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+					1024: {
+						slidesPerView: 3,
+						spaceBetween: 30,
 					},
 				},
 			});
 		</script>
 	</body>
 </html>
+
